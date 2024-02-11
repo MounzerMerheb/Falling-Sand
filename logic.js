@@ -108,7 +108,8 @@ function drawKernel(i, j) {
 
   for (let k = top; k <= bottom; k++) {
     for (let l = left; l <= right; l++) {
-      createSand(i + k, j + l, `hsl(${h},100%,50%)`);
+      if (grid[i + k][j + l] == 0)
+        createSand(i + k, j + l, `hsl(${h},100%,50%)`);
     }
   }
   if (hcounter == 2) h = (h + 1) % 360;
