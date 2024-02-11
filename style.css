@@ -1,0 +1,25 @@
+:root{
+  --cols : 10;
+  --cellSize : 5px;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+#grid-container{
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(var(--cols) ,var(--cellSize));
+  
+}
+
+.grid-cell{
+  width: var(--cellSize);
+  height: var(--cellSize);
+  background-color: rgba(128, 128, 128, 0.301);
+}
