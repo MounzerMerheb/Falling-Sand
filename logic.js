@@ -83,7 +83,7 @@ function drawGrid() {
 
 let hcounter = 0;
 function drawKernel(i, j) {
-  let kernel = 3;
+  let kernel = 5;
   let n = parseInt(kernel / 2);
 
   let top = -n,
@@ -108,7 +108,8 @@ function drawKernel(i, j) {
 
   for (let k = top; k <= bottom; k++) {
     for (let l = left; l <= right; l++) {
-      if (grid[i + k][j + l] == 0)
+      let r = Math.round(Math.random());
+      if (grid[i + k][j + l] == 0 && r == 1)
         createSand(i + k, j + l, `hsl(${h},100%,50%)`);
     }
   }
