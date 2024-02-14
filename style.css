@@ -12,6 +12,7 @@ body{
 }
 
 #grid-container{
+  margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(var(--cols) ,var(--cellSize));
   
